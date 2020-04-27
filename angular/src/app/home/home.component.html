@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-2">
+        <h2>User List</h2>
+      </div>
+      <div class="col" style="text-align: right;">
+        <button (click)="open()" class="btn btn-info" style="margin-left: 10px">create user</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Password</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | async">
+          <td>{{user.username}}</td>
+          <td>{{user.password}}</td>
+          <td>
+            <!-- <button (click)="UserDetails(user.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button (click)="UserUpdate(user.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+           -->
+            <button (click)="openUserDetails(user.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button (click)="openUserUpdate(user.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content=111)">Launch demo modal</button>
+
+<hr> -->
+
+<pre>{{ closeResult }}</pre>
