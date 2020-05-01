@@ -1,7 +1,6 @@
 package com.saksit.test.controller;
 
 import com.saksit.test.model.User;
-import com.saksit.test.repository.UserRepo;
 import com.saksit.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

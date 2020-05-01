@@ -1,7 +1,11 @@
 import { UserDetailsComponent } from './../user-details/user-details.component';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { Observable, from } from 'rxjs';
+=======
+import { Observable } from 'rxjs';
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
 import { User } from '../user';
 import { UserService } from '../user.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +22,7 @@ export class HomeComponent implements OnInit {
 
   users: Observable<User[]>;
   closeResult = '';
+<<<<<<< HEAD
   comment:string;
   strA: string = '';
 
@@ -30,14 +35,20 @@ export class HomeComponent implements OnInit {
   }
 
 
+=======
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
 
   constructor(private userService: UserService, private router: Router,private modalService: NgbModal) { }
 
   reloadData(){
+<<<<<<< HEAD
     this.users = this.userService.getUserList();
     // this.users.subscribe(e =>{
     //   this.str(e);
     // });
+=======
+    this.users = this.userService.getUserList(); 
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
   }
 
   ngOnInit() {
@@ -45,6 +56,10 @@ export class HomeComponent implements OnInit {
   }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
   deleteUser(id: number) {
     this.userService.deleteUser(id)
       .subscribe(
@@ -59,12 +74,17 @@ export class HomeComponent implements OnInit {
     // alert('ssssss');
     // this.router.navigate(['details', id]);
     const modalRef = this.modalService.open(UserDetailsComponent,{size: 'lg'});
+<<<<<<< HEAD
     modalRef.componentInstance.idFromHome = id;
+=======
+    modalRef.componentInstance.name = 'fah';
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
   }
 
   openUserUpdate(id: number){
     // this.router.navigate(['update', id]);
     const modalRef = this.modalService.open(UpdateUserComponent,{size: 'lg'});
+<<<<<<< HEAD
     modalRef.componentInstance.idFromHome = id;
     from(modalRef.result).subscribe(e =>{
       this.reloadData();
@@ -77,6 +97,9 @@ export class HomeComponent implements OnInit {
       this.reloadData();
     })
     // modalRef.componentInstance.idFromHome = id;
+=======
+    modalRef.componentInstance.name = 'fah';
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
   }
 
   // open(content) {
@@ -98,7 +121,15 @@ export class HomeComponent implements OnInit {
   // }
 
 
+<<<<<<< HEAD
 
+=======
+  open(content) {
+    console.log('home');
+    const modalRef = this.modalService.open(CreateUserComponent,{size: 'lg'});
+    modalRef.componentInstance.name = 'fah';
+  }
+>>>>>>> 3a242599b273b91980ad869744b5f1339f2af3a8
 }
 
 
