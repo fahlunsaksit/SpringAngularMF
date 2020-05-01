@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Update User</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input class="col" type="text" class="form-control" id="subject" required [(ngModel)]="content.subject" name="subject">
+        </div>
+  
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea rows="5" type="text" class="form-control" id="lastName" required [(ngModel)]="content.content" name="content"></textarea>
+        </div>
+  
+  
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>

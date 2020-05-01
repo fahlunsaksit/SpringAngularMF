@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12 text-right my-3">
+        <button (click)="openCreateContent()" type="button" class="btn btn-primary">Add Content</button>
+    </div>
+</div>
+
+<div *ngFor="let content of contents | async" class="card mb-5" >
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <p>{{ content.subject }}</p>
+            </div>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button (click)="editContent(content.id)" type="button" class="btn btn-primary"><i class="fas fa-edit"></i>edit</button>
+                <button (click)="deleteContent(content.id)" type="button" class="btn btn-primary">delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title">Special title treatment</h5> -->
+        <p class="card-text">{{ content.content }}</p>
+        <!-- <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quae nostrum architecto repellat adipisci beatae, iste voluptatum laborum placeat eum harum dignissimos incidunt sapiente, facere magni nemo. Explicabo, obcaecati deserunt?</p> -->
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>
+
+
